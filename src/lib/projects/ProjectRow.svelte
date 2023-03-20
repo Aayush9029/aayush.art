@@ -12,7 +12,7 @@
 
 <a
 	href={project.link}
-	class="relative h-48 w-full overflow-hidden rounded-xl border-4 border-solid border-gray-200 shadow hover:border-indigo-500 hover:bg-indigo-500 "
+	class="relative h-48 w-full overflow-hidden rounded-xl border-2 border-solid border-gray-200 shadow hover:border-indigo-500"
 >
 	<!-- background -->
 
@@ -50,8 +50,7 @@
 </a>
 
 <style lang="css">
-	*{
+	* {
 		transition: 0.13s ease;
 	}
-
 </style>
