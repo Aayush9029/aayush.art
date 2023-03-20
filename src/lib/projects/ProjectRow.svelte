@@ -20,10 +20,10 @@
 
 	<!-- foreground -->
 	<div
-		class="absolute inset-0 flex h-full  w-full flex-col rounded-lg bg-black bg-opacity-50 p-4 text-white shadow-lg"
+		class="absolute inset-0 flex h-full  w-full flex-col rounded-lg bg-black bg-opacity-75 p-4 text-white shadow-lg hover:bg-opacity-50"
 	>
 		<h1 class="text-2xl font-semibold">{project.name}</h1>
-		<p class="text-left">{project.description}</p>
+		<p class="text-left ">{project.description}</p>
 		<!-- tags -->
 		<div class="mt-4  flex">
 			{#if project.deprecated}
@@ -50,7 +50,8 @@
 </a>
 
 <style lang="css">
-	a {
+	*{
 		transition: 0.13s ease;
 	}
+
 </style>

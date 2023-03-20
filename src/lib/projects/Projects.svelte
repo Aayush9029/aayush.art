@@ -5,7 +5,9 @@
 	import projects from './projects.json';
 </script>
 
-<div class="dark:bg-black dark:text-white flex h-full w-full flex-col items-center justify-center p-4">
+<div
+	class="dark:bg-black dark:text-white flex h-full w-full flex-col items-center justify-center p-4"
+>
 	<h1 class="text-6xl font-bold  ">Projects</h1>
 	<p class="text-center ">Here are some of my projects</p>
 </div>
