@@ -3,4 +3,4 @@
 	import Projects from '../lib/projects/Projects.svelte';
 </script>
 
-<Projects />
+<Projects  class="dark:bg-slate-800"/>
