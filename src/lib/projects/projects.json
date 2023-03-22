@@ -2,7 +2,11 @@
 	{
 		"recommended": true,
 		"name": "Smart Rockets",
-		"tags": ["algorithms", "p5js", "AI"],
+		"tags": [
+			"algorithms",
+			"p5js",
+			"AI"
+		],
 		"thumb": "images/projects/80w/ai.png",
 		"link": "https://aayush.art/pages/projects/NN/index.html",
 		"description": "Genetic Algorithm based AI"
@@ -10,7 +14,10 @@
 	{
 		"recommended": true,
 		"name": "App Store",
-		"tags": ["iOS", "apple.com"],
+		"tags": [
+			"iOS",
+			"apple.com"
+		],
 		"thumb": "images/projects/80w/app-store.png",
 		"link": "https://apps.apple.com/ca/developer/aayush-pokharel/id1532440924",
 		"description": "My iOS Apps on the App Store"
@@ -18,7 +25,10 @@
 	{
 		"recommended": true,
 		"name": "Physicks",
-		"tags": ["simulation", "p5js"],
+		"tags": [
+			"simulation",
+			"p5js"
+		],
 		"thumb": "images/projects/80w/physicsSimulation.png",
 		"link": "https://aayush.art/pages/projects/PhysicsSimulation/index.html",
 		"description": "Interactive Physics Simulation using p5js"
@@ -26,7 +36,10 @@
 	{
 		"recommended": true,
 		"name": "MiniBird",
-		"tags": ["p5js", "games"],
+		"tags": [
+			"p5js",
+			"games"
+		],
 		"thumb": "images/projects/80w/minibird.png",
 		"link": "https://aayush.art/pages/projects/miniBird/index.html",
 		"description": "Flappy Bird clone using p5js"
@@ -34,7 +47,10 @@
 	{
 		"recommended": true,
 		"name": "Arcade",
-		"tags": ["p5js", "games"],
+		"tags": [
+			"p5js",
+			"games"
+		],
 		"thumb": "images/projects/80w/games.png",
 		"link": "../layout/index.html",
 		"description": "Recreation of arcade games made for high school arcade machine"
@@ -42,7 +58,10 @@
 	{
 		"recommended": true,
 		"name": "RAST",
-		"tags": ["p5js", "algorithms"],
+		"tags": [
+			"p5js",
+			"algorithms"
+		],
 		"thumb": "images/projects/80w/raycastingimage.png",
 		"link": "https://aayush.art/pages/projects/raycasting/index.html",
 		"description": "Ray Casting Visualization using p5js"
@@ -50,7 +69,10 @@
 	{
 		"recommended": true,
 		"name": "GENAi",
-		"tags": ["p5js", "design"],
+		"tags": [
+			"p5js",
+			"design"
+		],
 		"thumb": "images/projects/80w/nart.png",
 		"link": "https://aayush.art/pages/projects/noiseArt/index.html",
 		"description": "Generative Art using p5js"
@@ -58,7 +80,10 @@
 	{
 		"recommended": true,
 		"name": "Quad Tree",
-		"tags": ["p5js", "algorithms"],
+		"tags": [
+			"p5js",
+			"algorithms"
+		],
 		"thumb": "images/projects/80w/quadTree.jpg",
 		"link": "https://aayush.art/pages/projects/quadTree/index.html",
 		"description": "Quad Tree Visualization using p5js"
@@ -66,7 +91,10 @@
 	{
 		"recommended": true,
 		"name": "SAV",
-		"tags": ["p5js", "algorithms"],
+		"tags": [
+			"p5js",
+			"algorithms"
+		],
 		"thumb": "images/projects/80w/sorting.png",
 		"link": "https://aayush.art/pages/projects/sorting_Visual/index.html",
 		"description": "Sorting Algorithm Visuallization using p5js"
@@ -74,7 +102,10 @@
 	{
 		"recommended": true,
 		"name": "Recursivevis",
-		"tags": ["p5js", "algorithms"],
+		"tags": [
+			"p5js",
+			"algorithms"
+		],
 		"thumb": "images/projects/80w/maze.png",
 		"link": "https://aayush.art/pages/projects/maze_maker/index.html",
 		"description": "Recursive backtracker maze generator using p5js"
@@ -82,21 +113,30 @@
 	{
 		"recommended": true,
 		"name": "Easy Post",
-		"tags": ["python", "flask"],
+		"tags": [
+			"python",
+			"flask"
+		],
 		"thumb": "images/projects/80w/easyPost.png",
 		"link": "https://github.com/Aayush9029/EasyPost",
 		"description": "Full Stack forms, database template."
 	},
 	{
 		"name": "Chatty",
-		"tags": ["peerJS", "social", "chat"],
+		"tags": [
+			"peerJS",
+			"social",
+			"chat"
+		],
 		"thumb": "images/projects/80w/chatApp.png",
 		"link": "https://aayush9029.github.io/Decenchat/",
 		"description": "Decentralized Chat Application using PeerJS"
 	},
 	{
 		"name": "AltStore Repo",
-		"tags": ["iOS"],
+		"tags": [
+			"iOS"
+		],
 		"hidden": true,
 		"thumb": "images/projects/80w/altstore-repo.png",
 		"link": "https://altsource.by.lao.sb/browse/?source=https%3A%2F%2Fraw.githubusercontent.com%2FAayush9029%2FAltApps%2Fmain%2Fapps.json",
@@ -104,28 +144,40 @@
 	},
 	{
 		"name": "RControl",
-		"tags": ["gaming", "firebase"],
+		"tags": [
+			"gaming",
+			"firebase"
+		],
 		"thumb": "images/projects/80w/phoneControl.png",
 		"link": "https://aayush9029.github.io/PhoneControl/",
 		"description": "Online controller based gaming using firebase"
 	},
 	{
 		"name": "Pixy",
-		"tags": ["p5js", "tools"],
+		"tags": [
+			"p5js",
+			"tools"
+		],
 		"thumb": "images/projects/80w/pixart.png",
 		"link": "https://aayush.art/pages/projects/pixart/index.html",
 		"description": "Pixel Art Maker using p5js"
 	},
 	{
 		"name": "Dot-Matrix",
-		"tags": ["p5js", "tools"],
+		"tags": [
+			"p5js",
+			"tools"
+		],
 		"thumb": "images/projects/80w/dot_image.png",
 		"link": "https://aayush.art/pages/projects/dot_matrix/index.html",
 		"description": "Dot-Matrix"
 	},
 	{
 		"name": "Arth",
-		"tags": ["firebase", "p5js"],
+		"tags": [
+			"firebase",
+			"p5js"
+		],
 		"deprecated": true,
 		"thumb": "images/projects/80w/draw.png",
 		"link": "https://aayush.art/pages/projects/paint.html",
@@ -133,21 +185,30 @@
 	},
 	{
 		"name": "Parti",
-		"tags": ["p5js", "design"],
+		"tags": [
+			"p5js",
+			"design"
+		],
 		"thumb": "images/projects/80w/ballsimage.png",
 		"link": "https://aayush.art/pages/projects/ballsandlines.html",
 		"description": "Particle Js creation using p5js"
 	},
 	{
 		"name": "RPS 101",
-		"tags": ["webpage", "games"],
+		"tags": [
+			"webpage",
+			"games"
+		],
 		"thumb": "images/projects/80w/rockPaper.png",
 		"link": "https://aayush.art/pages/projects/rockPaperScissors/index.html",
 		"description": "Rock Paper Scissors"
 	},
 	{
 		"name": "WAPP",
-		"tags": ["api", "webpage"],
+		"tags": [
+			"api",
+			"webpage"
+		],
 		"thumb": "images/projects/80w/weather.jpg",
 		"link": "https://aayush.art/pages/projects/weather.html",
 		"description": "Weather app using openweathermap api"

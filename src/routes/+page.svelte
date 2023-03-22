@@ -1,5 +1,8 @@
 <script lang="ts">
-	import Projects from '../lib/projects/Projects.svelte';
+	import Main from '$lib/index/Main.svelte';
+import Projects from '../lib/projects/Projects.svelte';
 </script>
 
-<Projects />
+<!-- <Projects /> -->
+
+<Main/>
