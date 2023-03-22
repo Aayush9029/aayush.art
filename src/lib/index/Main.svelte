@@ -13,7 +13,7 @@
 		{#each longCards as card}
 			<div>
 				<LongImageCard data={card} />
-				<Confetti size="5" iterationCount="5" delay={[0, 3500]} />
+				<Confetti size="5" iterationCount="3" delay={[500, 1000]} />
 			</div>
 		{/each}
 
