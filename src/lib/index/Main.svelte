@@ -7,7 +7,7 @@
 	import LongImageCard from './views/LongImageCard.svelte';
 </script>
 
-<body class="dark:bg-black p-8">
+<body class="dark:bg-black p-4 md:p-8 lg:p-12">
 	<InfoCard data={aboutMe} />
 	<div class="flex flex-wrap justify-center gap-6 my-6">
 		{#each longCards as card}

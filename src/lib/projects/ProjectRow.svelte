@@ -25,7 +25,7 @@
 		<h1 class="text-2xl font-semibold">{project.name}</h1>
 		<p class="text-left ">{project.description}</p>
 		<!-- tags -->
-		<div class="mt-4  flex">
+		<div class="mt-4  lg:flex grid grid-cols-2 gap-0 text-center">
 			{#if project.deprecated}
 				<span
 					class="m-1 rounded-xl bg-red-400 bg-opacity-50 px-4 py-1 text-xs text-white	backdrop-blur-xl"
