@@ -1,6 +1,5 @@
-
 export interface InfoCardProps {
-    title: string;
-    text: string;
-    imageURL: string;
+	title: string;
+	text: string;
+	imageURL: string;
 }
