@@ -1,6 +1,6 @@
 const aboutMe = {
 	title: 'About Me',
-	text: "Hi, I'm Aayush Pokharel, currently compconsting (H,BSC)Computer Science in Toronto. I love bringing ideas to life and automating repetitive tasks. I've launched several iOS applications and shipped commercial products. I've worked on several opensource projects and I'm adept in maintaining linux-based systems. I value simple content structure, clean design and toughtful interactions.",
+	text: "Hi, I'm Aayush Pokharel, currently completing (H,BSC)Computer Science in Toronto. I love bringing ideas to life and automating repetitive tasks. I've launched several iOS applications and shipped commercial products. I've worked on several opensource projects and I'm adept in maintaining linux-based systems. I value simple content structure, clean design and toughtful interactions.",
 	image: 'images/main/profile128w.png'
 };
 const appstoreLong = {
