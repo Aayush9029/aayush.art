@@ -5,15 +5,16 @@ const aboutMe = {
 };
 const appstoreLong = {
 	title: 'App Store',
-	text: 'Here are some of my iOS apps that are published on Apple App Store, built using Swift.',
+	text: 'Apps that are published on Apple App Store.',
 	imageName: 'appstore.png',
 	url: 'https://apps.apple.com/us/developer/aayush-pokharel/id1491000009'
 };
-const projectsLong = {
-	title: 'Web Projects',
-	text: "Here are some of my web projects. I've built this website using Svelte and TailwindCSS",
-	imageName: 'projects.png',
-	url: './projects'
+
+const githubLong = {
+	title: 'Github',
+	text: 'My github containing open source projects.',
+	imageName: 'github.png',
+	link: 'https://github.com/Aayush9029'
 };
 
 const appstore = {
@@ -21,13 +22,6 @@ const appstore = {
 	tooltip: 'My iOS apps',
 	imageName: 'appstore.png',
 	link: 'https://apps.apple.com/us/developer/aayush-pokharel/id1491000009'
-};
-
-const github = {
-	title: 'Github',
-	tooltip: 'My Github profile',
-	imageName: 'github.png',
-	link: 'https://github.com/Aayush9029'
 };
 
 const linkedin = {
@@ -55,27 +49,8 @@ const pypi = {
 	imageName: 'pypi.png',
 	link: 'https://pypi.org/user/Aayush9029/'
 };
-const twitch = {
-	title: 'Twitch',
-	tooltip: 'My Twitch profile',
-	imageName: 'twitch.png',
-	link: 'https://www.twitch.tv/aayush9029'
-};
 
-const longCards = [appstoreLong, projectsLong];
-const imageCards = [appstore, github, linkedin, raycast, mail, pypi, twitch];
+const longCards = [appstoreLong, githubLong];
+const imageCards = [linkedin, raycast, mail, pypi];
 
-export {
-	aboutMe,
-	appstoreLong,
-	projectsLong,
-	appstore,
-	github,
-	linkedin,
-	raycast,
-	mail,
-	pypi,
-	twitch,
-	longCards,
-	imageCards
-};
+export { aboutMe, appstoreLong, appstore, linkedin, raycast, mail, pypi, longCards, imageCards };

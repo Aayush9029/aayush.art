@@ -3,6 +3,5 @@
 	import Projects from '../lib/projects/Projects.svelte';
 </script>
 
-<!-- <Projects /> -->
-
 <Main />
+<Projects />
