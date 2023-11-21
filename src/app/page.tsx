@@ -43,8 +43,8 @@ export default function Home() {
         </div>
 
 
-        <div className="relative col-span-2 rounded-xl p-4  hover:shadow-gray-600 shadow-xl bg-[url('/img/github-banner.png')] bg-cover">
-          <h1 className='text-[30px]'>◉</h1>
+        <div className="relative col-span-2 rounded-xl p-4  hover:shadow-black shadow-xl bg-[url('/img/github-banner.png')] bg-cover">
+          <Image src='/img/github-logo.png' alt='github-banner' width={32} height={32} className='mb-2' />
           <h3 className='inline text-xl  text-white '>
             I push most of my work to github. It contains my projects and contributions to open source.
           </h3>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
 
 
-        <div className="relative col-span-2 rounded-xl p-4  hover:shadow-blue-600 shadow-2xl bg-gradient-to-tr from-blue-600 to-blue-900">
+        <div className="relative col-span-2 rounded-xl p-4  hover:shadow-blue-600 shadow-2xl  bg-[url('/img/appstore-banner.png')] bg-cover">
           <h1 className='text-[30px]'></h1>
           <h3 className='inline text-xl  text-white '>
             I&apos;ve published several apps to the Apple App Store.
