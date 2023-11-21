@@ -10,7 +10,7 @@ export default function Home() {
       <div className="grid auto-rows-[200px] grid-cols-3 gap-4 md:w-[700px] lg:w-[700px]">
         <div className=" col-span-2 rounded-xl gradient-border bg-neutral-100 p-4 dark:bg-neutral-900 animate-wave hover:shadow-orange-800 shadow-2xl">
           <p className='block '>
-            <span className='fit p-2 ' >👋</span>
+            <span className='fit p-2' >👋</span>
             <h3 className='inline text-lg tracking-wide text-orange-300 dark:text-orange-200 '>
               Hello, People call me
             </h3>
