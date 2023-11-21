@@ -2,21 +2,19 @@
 	export let project: {
 		name: string;
 		description: string;
-		deprecated: boolean | false;
-		recommended: boolean | false;
-		link: string;
-		thumb: string;
+		path: string;
+		image: string;
 		tags: string[];
 	};
 </script>
 
 <a
-	href={project.link}
+	href={'web-projects/'+ project.path}
 	class="relative h-48 w-full overflow-hidden rounded-xl border-2 border-solid border-gray-200 shadow hover:border-indigo-500"
 >
 	<!-- background -->
 
-	<img class="h-full w-full object-cover blur-md " src={project.thumb} alt={project.name} />
+	<img class="h-full w-full object-cover blur-md " src={'' + project.image} alt={project.name} />
 
 	<!-- foreground -->
 	<div
@@ -26,18 +24,6 @@
 		<p class="text-left ">{project.description}</p>
 		<!-- tags -->
 		<div class="mt-4  lg:flex grid grid-cols-2 gap-0 text-center">
-			{#if project.deprecated}
-				<span
-					class="m-1 rounded-xl bg-red-400 bg-opacity-50 px-4 py-1 text-xs text-white	backdrop-blur-xl"
-					>deprecated</span
-				>
-			{/if}
-			{#if project.recommended}
-				<span
-					class="m-1 rounded-xl bg-green-400 bg-opacity-50 px-4 py-1 text-xs text-white	backdrop-blur-xl"
-					>recommended</span
-				>
-			{/if}
 			{#each project.tags as tag}
 				<span
 					class="m-1 rounded-xl bg-white bg-opacity-25 px-4 py-1 text-xs text-white	backdrop-blur-xl"

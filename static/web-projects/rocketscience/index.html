@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Smart Rockets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="p5/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script language="javascript" type="text/javascript" src="dna.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="rocket.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="population.js"
+    ></script>
+  </head>
+  <body id="body">
+    <span class="darkmode">
+      <button onclick="toggleDarkMode()" id="darkbtn"></button>
+    </span>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none'"
+        >&times;</span
+      >
+      Tip: You can move the obstacle *The grey circle*
+    </div>
+    <span id="canvasParent"></span>
+
+    <span class="sliderContainer">
+      <span>
+        <input
+          id="lifeSpan"
+          type="range"
+          class="slider s1"
+          id=""
+          max="500"
+          ,
+          min="100"
+          step="2"
+          ,
+          value="250"
+          onchange="changeValue()"
+        /><br />
+        <span class="label1">Life Span</span>
+      </span>
+      <span>
+        <input
+          id="Population"
+          type="range"
+          class="slider s2"
+          max="300"
+          min="2"
+          step="2"
+          value="12"
+          onchange="changeValue()"
+        /><br />
+        <span class="label2">Population</span>
+      </span>
+
+      <span>
+        <input
+          id="ObstacleW"
+          type="range"
+          class="slider s3"
+          max="240"
+          min="50"
+          step="2"
+          value="90"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Obstacle Radius</span>
+      </span>
+
+      <span>
+        <input
+          id="RocketHeight"
+          type="range"
+          class="slider s3"
+          max="50"
+          min="3"
+          step="1"
+          value="25"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Rocket Height</span>
+      </span>
+      <span>
+        <input
+          id="RocketWidth"
+          type="range"
+          class="slider s3"
+          max="50"
+          min="3"
+          step="1"
+          value="5"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Rocket Width</span>
+      </span>
+      <span>
+        <input
+          id="ObstacleY"
+          type="range"
+          class="slider s3"
+          max="250"
+          min="75"
+          step="2"
+          value="160"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Anything</span>
+      </span>
+    </span>
+
+    <span id="infoHolder"> </span>
+
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+  </body>
+</html>
