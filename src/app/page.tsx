@@ -3,12 +3,12 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main className='p-6'>
+    <main className='p-6 align-middle'>
 
       {/* spacing */}
 
       <div className="grid auto-rows-[200px] grid-cols-3 gap-4 md:w-[700px] lg:w-[700px]">
-        <div className=" col-span-2 rounded-xl gradient-border bg-neutral-100 p-4 dark:bg-neutral-900 animate-wave hover:shadow-orange-800 shadow-2xl">
+        <div className=" bento col-span-2  gradient-border p-4  hover:shadow-orange-800 shadow-lg animate-wave">
           <p className='block '>
             <span className='fit p-2' >👋</span>
             <h3 className='inline text-lg tracking-wide text-orange-300 dark:text-orange-200 '>
@@ -16,7 +16,7 @@ export default function Home() {
             </h3>
           </p>
 
-          <h1 className="text-6xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-orange-400 ">
+          <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-orange-400 ">
             Aayush Pokharel
           </h1>
 
@@ -26,7 +26,7 @@ export default function Home() {
 
         </div>
 
-        <div className="relative col-span-1 rounded-xl p-4 hover:shadow-blue-800 shadow-2xl bg-[url('/img/map-dark.png')] bg-cover border-2 border-blue-400">
+        <div className="relative col-span-1 bento p-4 hover:shadow-blue-800 shadow-xl bg-[url('/img/map-dark.png')] bg-cover border-2 border-blue-400">
 
           <span className="absolute flex h-4 w-4 right-4 top-4">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-100 opacity-85"></span>
