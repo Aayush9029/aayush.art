@@ -90,7 +90,7 @@ export default function Home() {
 
         <div className={`${commonStyle} lg:col-span-2  md:col-span-2  hidden md:inline lg:inline`}>
           <h1 className='text-[30px] text-pink-800'>👨‍💻 = ❤️</h1>
-          <h3 className='hidden text-xl  text-white md:inline lg:inline sm:inline'>
+          <h3 className='hidden text-xl  text-black dark:text-pink-100e md:inline lg:inline sm:inline'>
             I&apos;m comfortable with both in-person and remote work.
           </h3>
         </div>
@@ -110,7 +110,7 @@ export default function Home() {
 
         <div className={`${commonStyle} lg:col-span-1 md:col-span-2  hidden md:inline lg:inline`}>
 
-          <h3 className=' text-lg  text-pink-100 md:inline lg:inline sm:inline'>
+          <h3 className=' text-lg  text-black dark:text-pink-100 md:inline lg:inline sm:inline'>
             Thank you so much for visiting my website. I hope you have a great week ahead.
           </h3>
         </div>
@@ -179,19 +179,6 @@ const MailComponent = ({ backgroundUrl, text, footerText, footerLink }: MailRayc
   <div className="lg:col-span-1  md:col-span-2 relative col-span-1 p-6 hover:shadow-xl shadow-2xl bg-cover hover-border" style={{ backgroundImage: `url('${backgroundUrl}')` }}>
     <h3 className='inline text-xl text-white'>{text}</h3>
     <a href={footerLink} target='_blank' className={`text-sm font-semibold absolute bottom-6 left-6 p-1  px-4 rounded-full hover:cursor-pointer bg-white text-black hover:bg-blue-200 `}>{footerText}</a>
-  </div>
-);
-
-
-
-interface ComfortableCardProps {
-  text: string;
-}
-
-const ComfortableCardComponent = ({ text }: ComfortableCardProps) => (
-  <div className={`${commonStyle} col-span-1`} style={{ backgroundImage: `url('${backgroundUrl}')` }}>
-    <h1 className='text-[30px] text-gray-800'>👨‍💻 + ☕ = ❤️</h1>
-    <h3 className='inline text-xl text-black'>{text}</h3>
   </div>
 );
 
