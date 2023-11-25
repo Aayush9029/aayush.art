@@ -81,7 +81,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-transition:  ease-in-out 0.124s;
+  transition:  ease-in-out 0.10s;
 }
 
 html,
@@ -168,17 +168,20 @@ a {
 }
 
 
-/*         <div className="relative col-span-1 rounded-xl p-4 hover:shadow-blue-800 shadow-2xl bg-[url('/img/map-dark.png')] bg-cover border-2 border-blue-400">
- */
-
-
  .bento {
-  /* background-image: url('/img/map-dark.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 1rem;
-  /* border: 2px solid #1e40af; */
-  /* box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); */
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: 0.12s ease-in-out;
  }
+
+
+ .hover-border {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  transition: 0.12s ease-in-out;
+ }
+
+  .hover-border:hover {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+  }

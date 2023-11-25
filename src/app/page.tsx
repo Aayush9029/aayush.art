@@ -1,106 +1,120 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
+
+
+
 export default function Home() {
   return (
-    <main className='p-6 align-middle'>
+    <main className='p-6 sm:p-8 md:p-12 lg:p-16 align-middle'>
 
       {/* spacing */}
 
-      <div className="grid auto-rows-[200px] grid-cols-3 gap-4 md:w-[700px] lg:w-[700px]">
-        <div className=" bento col-span-2  gradient-border p-4  hover:shadow-orange-800 shadow-lg animate-wave">
+      <div className="grid sm:auto-rows-[200px] md:auto-rows-[200px] lg:auto-rows-[220px]  auto-rows-[220px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto w-full md:w-[800px] lg:w-[1000px]">
+        <div className="col-span-2  gradient-border p-4  hover:shadow-orange-800 shadow-lg animate-wave hover-border">
           <p className='block '>
             <span className='fit p-2' >👋</span>
-            <h3 className='inline text-lg tracking-wide text-orange-300 dark:text-orange-200 '>
+            <h3 className='inline text-lg tracking-wide text-orange-300 dark:text-white '>
               Hello, People call me
             </h3>
           </p>
 
-          <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-orange-400 ">
+          <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-orange-200 ">
             Aayush Pokharel
           </h1>
 
-          {/* <h3 className='text-sm text-white absolute top-2 right-2 p-1 bg-green-600 rounded-lg px-4 bg-opacity-80 border-green-500 border-2'>
-            Open to <b>Work</b>
-          </h3> */}
-
-        </div>
-
-        <div className="relative col-span-1 bento p-4 hover:shadow-blue-800 shadow-xl bg-[url('/img/map-dark.png')] bg-cover border-2 border-blue-400">
-
-          <span className="absolute flex h-4 w-4 right-4 top-4">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-100 opacity-85"></span>
-            <span className="relative inline-flex rounded-full h-4 w-4 bg-blue-300"></span>
-          </span>
-          <h1 className='text-[30px]'>🇨🇦</h1>
-          <h3 className='inline text-xl  text-white '>
-            I am based in Toronto.
-          </h3>
-          <h3 className='text-sm text-white absolute bottom-4 p-1 bg-blue-600 rounded-lg px-4'>
-            Open to relocate
+          <h3 className='text-sm text-white absolute top-4 right-6 p-1 bg-green-600 rounded-[32px] px-4 bg-opacity-40 border-green-500 border-2'>
+            💼&nbsp; Open to <b>Work</b>
           </h3>
 
         </div>
 
 
-        <div className="relative col-span-2 rounded-xl p-4  hover:shadow-black shadow-xl bg-[url('/img/github-banner.png')] bg-cover">
-          <Image src='/img/github-logo.png' alt='github-banner' width={32} height={32} className='mb-2' />
-          <h3 className='inline text-xl  text-white '>
-            I push most of my work to github. It contains my projects and contributions to open source.
-          </h3>
-          <h3 className='text-sm font-semibold text-white absolute bottom-4 p-1 bg-black rounded-lg px-4'>
-            github.com/Aayush9029
+
+        <LocationAppsComponent
+          icon='🇨🇦'
+          text='I currenly reside in toronto, where I thrive on transforming creative concepts into reality.'
+          backgroundUrl='/img/toronto.png'
+          bottomComponent={
+            <h3 className='text-sm text-white absolute bottom-6 left-6 p-1 rounded-full px-4 border-2 border-white bg-black bg-opacity-10 backdrop-blur-md'>Open to relocate</h3>
+          }
+        />
+
+
+
+        <GitHubAppStoreComponent
+          backgroundUrl='/img/github-banner.png'
+          iconUrl='/img/github-logo.png'
+          title="My Github contains my projects and contributions to open source."
+          description=''
+          footerText='github.com/Aayush9029'
+          footerLink='https://github.com/Aayush9029'
+        />
+
+
+
+        <GitHubAppStoreComponent
+          backgroundUrl='/img/raycast.png'
+          iconUrl='/img/raycast-icon.png'
+          title='I love automating tasks building things for the community. Here are some of my Raycast Extensions.'
+          description=''
+          footerText='raycast.com/Aayush9029'
+          footerLink='https://www.raycast.com/Aayush9029'
+        />
+
+
+
+        <GitHubAppStoreComponent
+          backgroundUrl='/img/appstore-banner.png'
+          iconUrl='/img/apple.png'
+          title="I've published several apps to the Apple App Store."
+          description=''
+          footerText='My App Store Page'
+          footerLink='https://apps.apple.com/ca/developer/aayush-pokharel/id1532440924'
+        />
+
+        {/* raycast */}
+
+
+
+        <GitHubAppStoreComponent
+          backgroundUrl='/img/apps.png'
+          iconUrl=''
+          title='I&apos;ve built several apps, here are few which have been deployed / published to the web.'
+          description=''
+          footerText='apps.aayush.art'
+          footerLink='https://apps.aayush.art'
+        />
+
+
+
+        <div className={`${commonStyle} lg:col-span-2  md:col-span-2  hidden md:inline lg:inline`}>
+          <h1 className='text-[30px] text-pink-800'>👨‍💻 = ❤️</h1>
+          <h3 className='hidden text-xl  text-white md:inline lg:inline sm:inline'>
+            I&apos;m comfortable with both in-person and remote work.
           </h3>
         </div>
 
-        <div className="relative col-span-1 rounded-xl p-4  hover:shadow-black-600 shadow-2xl bg-gradient-to-tr from-gray-200 to-gray-500">
-          <h1 className='text-[30px]'>👨‍💻</h1>
-          <h3 className='inline text-xl  text-black '>
-            I prefer to be in person, but I&apos;m comfortable with remote work.
+
+
+
+        <MailComponent
+          backgroundUrl='/img/email.png'
+          text='Feel free to reach out to me via email. I am not active on other platforms.'
+          footerText='Email Me'
+          footerLink='mailto:'
+        />
+
+
+
+
+        <div className={`${commonStyle} lg:col-span-1 md:col-span-2  hidden md:inline lg:inline`}>
+
+          <h3 className=' text-lg  text-pink-100 md:inline lg:inline sm:inline'>
+            Thank you so much for visiting my website. I hope you have a great week ahead.
           </h3>
         </div>
 
-
-        <div className="relative col-span-2 rounded-xl p-4  hover:shadow-blue-600 shadow-2xl  bg-[url('/img/appstore-banner.png')] bg-cover">
-          <h1 className='text-[30px]'></h1>
-          <h3 className='inline text-xl  text-white '>
-            I&apos;ve published several apps to the Apple App Store.
-          </h3>
-          <h3 className='text-sm font-semibold text-blue-600 absolute bottom-4 p-1 bg-white rounded-lg px-4'>
-            My App Store Page
-          </h3>
-        </div>
-
-        <div className="relative col-span-1 rounded-xl p-4  hover:shadow-red-600 shadow-2xl bg-gradient-to-tr from-red-600 to-red-900">
-          <h1 className='text-[30px]'></h1>
-          <h3 className='inline text-xl  text-white '>
-            I love building things for the community.
-          </h3>
-          <h3 className='text-sm font-semibold text-white-600 absolute bottom-4 p-1 bg-black rounded-lg px-4'>
-            Raycast Store
-          </h3>
-        </div>
-
-        <div className="relative col-span-1 rounded-xl p-4  hover:shadow-sky-600 shadow-2xl bg-gradient-to-tr from-sky-500 to-sky-700">
-          <h1 className='text-[30px]'>📧</h1>
-          <h3 className='inline text-xl  text-white '>
-            Want to say hi? I&apos;m always up for a chat.
-          </h3>
-          <h3 className='text-sm font-semibold text-sky-700 absolute bottom-4 p-1 bg-white rounded-lg px-4'>
-            Email me
-          </h3>
-        </div>
-
-
-        <div className="relative col-span-2 rounded-xl p-4  hover:shadow-pink-800 shadow-xl bg-gradient-to-tr from-pink-800 to-pink-900">
-          <h1 className='text-[30px]'>📱</h1>
-          <h3 className='inline text-xl  text-white '>
-            Here are most of my apps. I&apos;ve deployed so far.
-          </h3>
-          <h3 className='text-sm font-semibold text-pink-600 absolute bottom-4 p-1 bg-white rounded-lg px-4'>
-            apps.aayush.art
-          </h3>
-        </div>
 
 
 
@@ -110,3 +124,74 @@ export default function Home() {
     </main>
   )
 }
+
+
+const commonStyle = "relative p-6 hover:shadow-xl shadow-xl bg-cover hover-border";
+
+
+
+
+interface GitHubAppStoreProps {
+  backgroundUrl: string;
+  iconUrl?: string;
+  title: string;
+  description: string;
+  footerText: string;
+  footerLink: string;
+}
+
+export const GitHubAppStoreComponent = ({ backgroundUrl, iconUrl, title, description, footerText, footerLink }: GitHubAppStoreProps) => (
+  <a href={footerLink} target='_blank' className={`${commonStyle} col-span-2 hover:border-blue-400 hover:scale-[1.02]`} style={{ backgroundImage: `url('${backgroundUrl}')` }}>
+    {iconUrl && <Image src={iconUrl} alt='icon' width={32} height={32} className='mb-2' />}
+    <h3 className='inline text-xl text-white'>{title}</h3>
+    <span className={`text-sm font-semibold absolute bottom-6 left-6 p-1  px-4 rounded-full hover:cursor-pointer bg-white text-black  `}>{footerText}</span>
+  </a>
+);
+
+
+interface LocationAppsProps {
+  icon: string;
+  text: string;
+  backgroundUrl: string;
+  bottomComponent?: JSX.Element;
+}
+export const LocationAppsComponent = ({ icon, text, backgroundUrl, bottomComponent }: LocationAppsProps) => (
+  <div className={`${commonStyle} col-span-2`} style={{ backgroundImage: `url('${backgroundUrl}')` }}>
+    <h1 className='text-[30px]'>{icon}</h1>
+    <h3 className='inline text-xl text-white'>{text}</h3>
+    {bottomComponent}
+  </div>
+);
+
+
+
+
+interface MailRaycastProps {
+  backgroundUrl: string;
+  text: string;
+  footerText: string;
+  footerLink: string;
+}
+
+
+
+export const MailComponent = ({ backgroundUrl, text, footerText, footerLink }: MailRaycastProps) => (
+  <div className="lg:col-span-1  md:col-span-2 relative col-span-1 p-6 hover:shadow-xl shadow-2xl bg-cover hover-border" style={{ backgroundImage: `url('${backgroundUrl}')` }}>
+    <h3 className='inline text-xl text-white'>{text}</h3>
+    <a href={footerLink} target='_blank' className={`text-sm font-semibold absolute bottom-6 left-6 p-1  px-4 rounded-full hover:cursor-pointer bg-white text-black hover:bg-blue-200 `}>{footerText}</a>
+  </div>
+);
+
+
+
+interface ComfortableCardProps {
+  text: string;
+}
+
+export const ComfortableCardComponent = ({ text }: ComfortableCardProps) => (
+  <div className={`${commonStyle} col-span-1`} style={{ backgroundImage: `url('${backgroundUrl}')` }}>
+    <h1 className='text-[30px] text-gray-800'>👨‍💻 + ☕ = ❤️</h1>
+    <h3 className='inline text-xl text-black'>{text}</h3>
+  </div>
+);
+
