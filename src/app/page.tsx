@@ -140,7 +140,7 @@ interface GitHubAppStoreProps {
   footerLink: string;
 }
 
-export const GitHubAppStoreComponent = ({ backgroundUrl, iconUrl, title, description, footerText, footerLink }: GitHubAppStoreProps) => (
+const GitHubAppStoreComponent = ({ backgroundUrl, iconUrl, title, description, footerText, footerLink }: GitHubAppStoreProps) => (
   <a href={footerLink} target='_blank' className={`${commonStyle} col-span-2 hover:border-blue-400 hover:scale-[1.02]`} style={{ backgroundImage: `url('${backgroundUrl}')` }}>
     {iconUrl && <Image src={iconUrl} alt='icon' width={32} height={32} className='mb-2' />}
     <h3 className='inline text-xl text-white'>{title}</h3>
@@ -155,7 +155,7 @@ interface LocationAppsProps {
   backgroundUrl: string;
   bottomComponent?: JSX.Element;
 }
-export const LocationAppsComponent = ({ icon, text, backgroundUrl, bottomComponent }: LocationAppsProps) => (
+const LocationAppsComponent = ({ icon, text, backgroundUrl, bottomComponent }: LocationAppsProps) => (
   <div className={`${commonStyle} col-span-2`} style={{ backgroundImage: `url('${backgroundUrl}')` }}>
     <h1 className='text-[30px]'>{icon}</h1>
     <h3 className='inline text-xl text-white'>{text}</h3>
@@ -175,7 +175,7 @@ interface MailRaycastProps {
 
 
 
-export const MailComponent = ({ backgroundUrl, text, footerText, footerLink }: MailRaycastProps) => (
+const MailComponent = ({ backgroundUrl, text, footerText, footerLink }: MailRaycastProps) => (
   <div className="lg:col-span-1  md:col-span-2 relative col-span-1 p-6 hover:shadow-xl shadow-2xl bg-cover hover-border" style={{ backgroundImage: `url('${backgroundUrl}')` }}>
     <h3 className='inline text-xl text-white'>{text}</h3>
     <a href={footerLink} target='_blank' className={`text-sm font-semibold absolute bottom-6 left-6 p-1  px-4 rounded-full hover:cursor-pointer bg-white text-black hover:bg-blue-200 `}>{footerText}</a>
@@ -188,7 +188,7 @@ interface ComfortableCardProps {
   text: string;
 }
 
-export const ComfortableCardComponent = ({ text }: ComfortableCardProps) => (
+const ComfortableCardComponent = ({ text }: ComfortableCardProps) => (
   <div className={`${commonStyle} col-span-1`} style={{ backgroundImage: `url('${backgroundUrl}')` }}>
     <h1 className='text-[30px] text-gray-800'>👨‍💻 + ☕ = ❤️</h1>
     <h3 className='inline text-xl text-black'>{text}</h3>
