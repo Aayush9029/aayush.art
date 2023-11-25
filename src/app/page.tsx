@@ -90,7 +90,7 @@ export default function Home() {
 
         <div className={`${commonStyle} lg:col-span-2  md:col-span-2  hidden md:inline lg:inline`}>
           <h1 className='text-[30px] text-pink-800'>👨‍💻 = ❤️</h1>
-          <h3 className='hidden text-xl  text-black dark:text-pink-100e md:inline lg:inline sm:inline'>
+          <h3 className='hidden text-xl  text-black dark:text-pink-100 md:inline lg:inline sm:inline'>
             I&apos;m comfortable with both in-person and remote work.
           </h3>
         </div>
