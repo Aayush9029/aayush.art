@@ -12,12 +12,12 @@ export default function Home() {
 
       <div className="grid sm:auto-rows-[200px] md:auto-rows-[200px] lg:auto-rows-[220px]  auto-rows-[220px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto w-full md:w-[800px] lg:w-[1000px]">
         <div className="col-span-2  gradient-border p-4  hover:shadow-orange-800 shadow-lg animate-wave hover-border">
-          <p className='block '>
+          <div className='block '>
             <span className='fit p-2' >👋</span>
             <h3 className='inline text-lg tracking-wide text-orange-300 dark:text-white '>
               Hello, People call me
             </h3>
-          </p>
+          </div>
 
           <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-orange-200 ">
             Aayush Pokharel
