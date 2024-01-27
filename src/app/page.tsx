@@ -22,11 +22,6 @@ export default function Home() {
           <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-orange-200 ">
             Aayush Pokharel
           </h1>
-
-          <h3 className='text-sm text-white absolute top-4 right-6 p-1 bg-green-600 rounded-[32px] px-4 bg-opacity-40 border-green-500 border-2'>
-            💼&nbsp; Open to <b>Work</b>
-          </h3>
-
         </div>
 
 
