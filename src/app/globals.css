@@ -5,9 +5,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -44,44 +44,42 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+  --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+  --secondary-glow: linear-gradient(
+    to bottom right,
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0.3)
+  );
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+  --tile-start-rgb: 2, 13, 46;
+  --tile-end-rgb: 2, 5, 19;
+  --tile-border: conic-gradient(
+    #ffffff80,
+    #ffffff40,
+    #ffffff30,
+    #ffffff20,
+    #ffffff10,
+    #ffffff10,
+    #ffffff80
+  );
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  --callout-rgb: 20, 20, 20;
+  --callout-border-rgb: 108, 108, 108;
+  --card-rgb: 100, 100, 100;
+  --card-border-rgb: 200, 200, 200;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition:  ease-in-out 0.10s;
+  transition: ease-in-out 0.1s;
 }
 
 html,
@@ -130,13 +128,17 @@ a {
 }
 
 .gradient-border::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background: linear-gradient(90deg, rgb(255, 198, 42) 0%, rgba(255, 0, 0, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 198, 42) 0%,
+    rgba(255, 0, 0, 1) 100%
+  );
   background-size: 200% 200%;
   animation: gradientBorder 6s ease infinite;
   border-radius: inherit;
@@ -144,7 +146,6 @@ a {
 }
 
 @keyframes wave {
-
   0%,
   100% {
     transform: rotate(0deg);
@@ -167,21 +168,19 @@ a {
   animation: wave 2.5s ease-in-out infinite;
 }
 
-
- .bento {
+.bento {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.12s ease-in-out;
- }
+}
 
-
- .hover-border {
+.hover-border {
   border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: 50px;
   transition: 0.12s ease-in-out;
- }
+}
 
-  .hover-border:hover {
-      border: 2px solid rgba(255, 255, 255, 0.5);
-  }
+.hover-border:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
