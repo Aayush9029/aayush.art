@@ -82,7 +82,7 @@ export default function Home() {
           backgroundUrl="/img/email.png"
           text="Feel free to reach out to me via email. I am not active on other platforms."
           footerText="Email Me"
-          footerLink="mailto:"
+          footerLink="mailto:hi@aayush.art"
         />
 
         <div
