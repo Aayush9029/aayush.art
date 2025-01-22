@@ -1,5 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
+
+// Add JSX namespace to fix type errors
+declare namespace JSX {
+  interface IntrinsicElements {
+    [elemName: string]: any;
+  }
+}
 
 export default function Home() {
   return (
@@ -24,11 +33,6 @@ export default function Home() {
           icon="🇨🇦"
           text="I currenly reside in toronto, where I thrive on transforming creative concepts into reality."
           backgroundUrl="/img/toronto.png"
-          bottomComponent={
-            <h3 className="text-sm text-white absolute bottom-6 left-6 p-1 rounded-full px-4 border-2 border-white bg-black bg-opacity-10 backdrop-blur-md">
-              Open to relocate
-            </h3>
-          }
         />
 
         <GitHubAppStoreComponent
@@ -68,13 +72,12 @@ export default function Home() {
           footerText="apps.aayush.art"
           footerLink="https://apps.aayush.art"
         />
-
         <div
           className={`${commonStyle} lg:col-span-2  md:col-span-2  hidden md:inline lg:inline`}
         >
-          <h1 className="text-[30px] text-pink-800">👨‍💻 = ❤️</h1>
+          <h1 className="text-[30px] text-pink-800">🌟 = ∞</h1>
           <h3 className="hidden text-xl  text-black text-pink-100 md:inline lg:inline sm:inline">
-            I&apos;m comfortable with both in-person and remote work.
+            Mortality is inevitable, let's create lasting wonders for humanity.
           </h3>
         </div>
 
@@ -121,6 +124,7 @@ const GitHubAppStoreComponent = ({
   <a
     href={footerLink}
     target="_blank"
+    rel="noopener noreferrer"
     className={`${commonStyle} col-span-2 hover:border-blue-400 hover:scale-[1.02]`}
     style={{ backgroundImage: `url('${backgroundUrl}')` }}
   >
@@ -142,6 +146,7 @@ interface LocationAppsProps {
   backgroundUrl: string;
   bottomComponent?: JSX.Element;
 }
+
 const LocationAppsComponent = ({
   icon,
   text,
@@ -179,6 +184,7 @@ const MailComponent = ({
     <a
       href={footerLink}
       target="_blank"
+      rel="noopener noreferrer"
       className={`text-sm font-semibold absolute bottom-6 left-6 p-1  px-4 rounded-full hover:cursor-pointer bg-white text-black hover:bg-blue-200 `}
     >
       {footerText}
