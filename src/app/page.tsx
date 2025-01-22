@@ -1,193 +1,111 @@
 "use client";
 
-import Image from "next/image";
-import styles from "./page.module.css";
-
-// Add JSX namespace to fix type errors
-declare namespace JSX {
-  interface IntrinsicElements {
-    [elemName: string]: any;
-  }
-}
+import { UnifiedCard } from '../components/UnifiedCard';
+import { GradientCard } from '../components/GradientCard';
+import './animations.css';
 
 export default function Home() {
   return (
-    <main className="p-6 sm:p-8 md:p-12 lg:p-16 align-middle">
-      {/* spacing */}
-
-      <div className="grid sm:auto-rows-[200px] md:auto-rows-[200px] lg:auto-rows-[220px]  auto-rows-[220px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto w-full md:w-[800px] lg:w-[1000px]">
-        <div className="col-span-2  gradient-border p-4  hover:shadow-orange-800 shadow-lg animate-wave hover-border">
-          <div className="block ">
-            <span className="fit p-2">👋</span>
-            <h3 className="inline text-lg tracking-wide text-orange-300 text-white ">
-              Hello, People call me
-            </h3>
+    <main className="p-6 sm:p-8 md:p-12 lg:p-16 min-h-screen bg-black">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto w-full md:w-[800px] lg:w-[1000px]">
+        {/* Intro Card */}
+        <GradientCard
+          className="col-span-2 min-h-[200px]"
+          animationDelay={100}
+        >
+          <div className="flex flex-col justify-center h-full space-y-2">
+            <div className="flex items-center justify-center space-x-2">
+              <h3 className="text-lg font-medium tracking-widest bg-gradient-to-r from-blue-100 to-teal-500 text-transparent bg-clip-text">
+                Welcome to my digital realm
+              </h3>
+            </div>
+            <h1 className="text-5xl sm:text-4xl font-bold text-center">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-teal-200">
+                Aayush Pokharel
+              </span>
+            </h1>
           </div>
+        </GradientCard>
 
-          <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-orange-200 ">
-            Aayush Pokharel
-          </h1>
-        </div>
-
-        <LocationAppsComponent
-          icon="🇨🇦"
-          text="I currenly reside in toronto, where I thrive on transforming creative concepts into reality."
+        {/* Location Card */}
+        <UnifiedCard
           backgroundUrl="/img/toronto.png"
+          icon={{ src: "/img/canada.png" }}
+          title="Based in Toronto, crafting digital experiences that push the boundaries of what's possible."
+          className="col-span-2"
+          animationDelay={200}
         />
 
-        <GitHubAppStoreComponent
+        {/* GitHub Card */}
+        <UnifiedCard
           backgroundUrl="/img/github-banner.png"
-          iconUrl="/img/github-logo.png"
-          title="My Github contains my projects and contributions to open source."
-          description=""
+          icon={{ src: "/img/github-logo.png" }}
+          title="Architecting the future through code. My GitHub is a canvas of innovation and open-source contributions."
           footerText="github.com/Aayush9029"
           footerLink="https://github.com/Aayush9029"
+          className="col-span-2"
+          animationDelay={300}
         />
 
-        <GitHubAppStoreComponent
+        {/* Rest of the cards following the same pattern */}
+        <UnifiedCard
           backgroundUrl="/img/raycast.png"
-          iconUrl="/img/raycast-icon.png"
-          title="I love automating tasks building things for the community. Here are some of my Raycast Extensions."
-          description=""
+          icon={{ src: "/img/raycast-icon.png" }}
+          title="Pioneering productivity with Raycast extensions that transform everyday workflows into seamless experiences."
           footerText="raycast.com/Aayush9029"
           footerLink="https://www.raycast.com/Aayush9029"
+          className="col-span-2"
+          animationDelay={400}
         />
 
-        <GitHubAppStoreComponent
+        <UnifiedCard
           backgroundUrl="/img/appstore-banner.png"
-          iconUrl="/img/apple.png"
-          title="I've published several apps to the Apple App Store."
-          description=""
+          icon={{ src: "/img/apple.png" }}
+          title="Crafting exceptional iOS experiences that redefine mobile innovation."
           footerText="My App Store Page"
           footerLink="https://apps.apple.com/ca/developer/aayush-pokharel/id1532440924"
+          className="col-span-2"
+          animationDelay={500}
         />
 
-        {/* raycast */}
-
-        <GitHubAppStoreComponent
+        <UnifiedCard
           backgroundUrl="/img/apps.png"
-          iconUrl=""
-          title="I've built several apps, here are few which have been deployed / published to the web."
-          description=""
+          icon={{ src: "/img/apple.png" }}
+          title="Explore my digital playground - a collection of web applications that challenge the status quo."
           footerText="apps.aayush.art"
           footerLink="https://apps.aayush.art"
+          className="col-span-2"
+          animationDelay={600}
         />
-        <div
-          className={`${commonStyle} lg:col-span-2  md:col-span-2  hidden md:inline lg:inline`}
-        >
-          <h1 className="text-[30px] text-pink-800">🌟 = ∞</h1>
-          <h3 className="hidden text-xl  text-black text-pink-100 md:inline lg:inline sm:inline">
-            Mortality is inevitable, let's create lasting wonders for humanity.
-          </h3>
-        </div>
 
-        <MailComponent
+        <UnifiedCard
           backgroundUrl="/img/email.png"
-          text="Feel free to reach out to me via email. I am not active on other platforms."
+          icon={{ src: "/img/apple.png" }}
+          title="Let's collaborate on something extraordinary. Drop me a line - I'm always excited to discuss new possibilities."
           footerText="Email Me"
           footerLink="mailto:hi@aayush.art"
+          className="lg:col-span-2 md:col-span-2"
+          animationDelay={650}
         />
 
-        <div
-          className={`${commonStyle} lg:col-span-1 md:col-span-2  hidden md:inline lg:inline`}
+        <UnifiedCard
+          className="lg:col-span-1 md:col-span-1 col-span-1 landscape:hidden"
+          animationDelay={750}
         >
-          <h3 className=" text-lg  text-black text-pink-100 md:inline lg:inline sm:inline">
-            Thank you so much for visiting my website. I hope you have a great
-            week ahead.
+          <h3 className="text-lg text-pink-100">
+            Thanks for exploring my digital universe. May your code be bug-free and your coffee be strong.
           </h3>
-        </div>
+        </UnifiedCard>
+        <UnifiedCard
+          className="lg:col-span-2 md:col-span-2 col-span-1"
+          animationDelay={700}
+        >
+          <h1 className="text-[30px] text-pink-800">💫 = ∞</h1>
+          <h3 className="text-xl text-pink-100">
+            In pursuit of digital excellence, creating innovations that outlast time itself.
+          </h3>
+        </UnifiedCard>
       </div>
     </main>
   );
 }
-
-const commonStyle =
-  "relative p-6 hover:shadow-xl shadow-xl bg-cover hover-border";
-
-interface GitHubAppStoreProps {
-  backgroundUrl: string;
-  iconUrl?: string;
-  title: string;
-  description: string;
-  footerText: string;
-  footerLink: string;
-}
-
-const GitHubAppStoreComponent = ({
-  backgroundUrl,
-  iconUrl,
-  title,
-  description,
-  footerText,
-  footerLink,
-}: GitHubAppStoreProps) => (
-  <a
-    href={footerLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`${commonStyle} col-span-2 hover:border-blue-400 hover:scale-[1.02]`}
-    style={{ backgroundImage: `url('${backgroundUrl}')` }}
-  >
-    {iconUrl && (
-      <Image src={iconUrl} alt="icon" width={32} height={32} className="mb-2" />
-    )}
-    <h3 className="inline text-xl text-white">{title}</h3>
-    <span
-      className={`text-sm font-semibold absolute bottom-6 left-6 p-1  px-4 rounded-full hover:cursor-pointer bg-white text-black  `}
-    >
-      {footerText}
-    </span>
-  </a>
-);
-
-interface LocationAppsProps {
-  icon: string;
-  text: string;
-  backgroundUrl: string;
-  bottomComponent?: JSX.Element;
-}
-
-const LocationAppsComponent = ({
-  icon,
-  text,
-  backgroundUrl,
-  bottomComponent,
-}: LocationAppsProps) => (
-  <div
-    className={`${commonStyle} col-span-2`}
-    style={{ backgroundImage: `url('${backgroundUrl}')` }}
-  >
-    <h1 className="text-[30px]">{icon}</h1>
-    <h3 className="inline text-xl text-white">{text}</h3>
-    {bottomComponent}
-  </div>
-);
-
-interface MailRaycastProps {
-  backgroundUrl: string;
-  text: string;
-  footerText: string;
-  footerLink: string;
-}
-
-const MailComponent = ({
-  backgroundUrl,
-  text,
-  footerText,
-  footerLink,
-}: MailRaycastProps) => (
-  <div
-    className="lg:col-span-1  md:col-span-2 relative col-span-1 p-6 hover:shadow-xl shadow-2xl bg-cover hover-border"
-    style={{ backgroundImage: `url('${backgroundUrl}')` }}
-  >
-    <h3 className="inline text-xl text-white">{text}</h3>
-    <a
-      href={footerLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`text-sm font-semibold absolute bottom-6 left-6 p-1  px-4 rounded-full hover:cursor-pointer bg-white text-black hover:bg-blue-200 `}
-    >
-      {footerText}
-    </a>
-  </div>
-);
