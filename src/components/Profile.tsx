@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Social, SocialPlatform, Author } from '../types/allTypes';
 import Link from 'next/link';
-import { BsLink45Deg, BsYoutube, BsGithub, BsInstagram, BsLink, BsTwitterX, BsPatchCheckFill } from 'react-icons/bs';
+import { BsYoutube, BsGithub, BsInstagram, BsLink, BsTwitterX, BsPatchCheckFill } from 'react-icons/bs';
 import { IconType } from 'react-icons';
 
 interface ProfileHeaderProps {

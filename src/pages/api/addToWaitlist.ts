@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (error) throw error;
 
       return res.status(200).json({ message: 'Successfully added to waitlist' });
-    } catch (error) {
+    } catch {
       return res.status(500).json({ error: 'Failed to add to waitlist' });
     }
   } else {

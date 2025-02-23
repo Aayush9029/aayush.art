@@ -66,21 +66,10 @@ export default function Waitlist() {
     setStatus('loading');
 
     try {
-      const response = await fetch('/api/addToWaitlist', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to add to waitlist');
-      }
-
+      await addToWaitlist(email);
       setStatus('success');
       setEmail('');
-    } catch (error) {
+    } catch {
       setStatus('error');
     }
   };
@@ -117,7 +106,7 @@ export default function Waitlist() {
     <div className="w-1 h-10 bg-white/10 mx-auto" />
     <div className="w-full max-w-2xl mx-auto p-4 bg-gradient-to-br from-white/50 to-white rounded-2xl shadow-lg border border-gray-800">
       <p className="text-black font-bold text-xs text-center">
-        I don't know if this is funny or bad to make my own website a waitlist.
+        I don&apos;t know if this is funny or bad to make my own website a waitlist.
         Follow me on <a href="https://x.com/aayushbuilds" className="text-blue-500">X</a> for updates.
       </p>
     </div>
