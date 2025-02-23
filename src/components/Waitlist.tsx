@@ -66,7 +66,18 @@ export default function Waitlist() {
     setStatus('loading');
 
     try {
-      await addToWaitlist(email);
+      const response = await fetch('/api/addToWaitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to add to waitlist');
+      }
+
       setStatus('success');
       setEmail('');
     } catch {
