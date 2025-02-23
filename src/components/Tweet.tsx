@@ -1,6 +1,6 @@
 'use client';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { OptimizedImage } from './OptimizedImage';
 
 interface TweetProps {
   content: string;
@@ -47,15 +47,11 @@ export default function Tweet({ content, timestamp, image, location, url }: Twee
           {content}
         </p>
         {image && (
-          <div className="relative h-64 w-full overflow-hidden rounded-xl">
-            <Image
-              src={image}
-              alt="Tweet image"
-              width={2000}
-              height={2000}
-              loading="lazy"
-            />
-          </div>
+          <OptimizedImage
+            src={image}
+            alt="Tweet media"
+            className="mt-2 rounded-lg"
+          />
         )}
         <div className="flex flex-col gap-2 text-sm text-white/60">
           <div className="flex items-center space-x-4">
@@ -66,12 +62,14 @@ export default function Tweet({ content, timestamp, image, location, url }: Twee
               <span className="font-mono">• {location}</span>
             )}
           </div>
-          {url && (
-            <div className="font-mono text-xs text-white/40 truncate hidden group-hover:block">
-              {url}
-            </div>
-          )}
         </div>
+        {url && (
+          <div className="absolute right-[-16px] bottom-[-15px] font-mono text-xs opacity-0 group-hover:opacity-100 ">
+            <div className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/5">
+            {url}
+            </div>
+          </div>
+        )}
       </div>
     </motion.div>
   );
