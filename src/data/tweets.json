@@ -1,0 +1,69 @@
+{
+  "tweets": [
+    {
+      "id": "1", 
+      "content": "Welcome to my digital realm. I'm Aayush Pokharel, crafting experiences that push boundaries.",
+      "timestamp": "2024-02-23T10:00:00Z",
+      "image": null
+    },
+    {
+      "id": "2",
+      "content": "Based in Toronto, crafting digital experiences that push the boundaries of what's possible.",
+      "timestamp": "2024-02-23T11:30:00Z",
+      "image": "/images/cn-canada.png",
+      "location": "Toronto, ON"
+    },
+    {
+      "id": "4",
+      "content": "Pioneering productivity with Raycast extensions that transform everyday workflows into seamless experiences.",
+      "timestamp": "2024-02-23T13:00:00Z",
+      "image": "/images/raycast.png",
+      "url": "https://www.raycast.com/Aayush9029"
+    },
+    {
+      "id": "5", 
+      "content": "Crafting exceptional iOS experiences that redefine mobile innovation.",
+      "timestamp": "2024-02-23T14:00:00Z",
+      "image": "/images/appstore.png",
+      "url": "https://apps.apple.com/ca/developer/aayush-pokharel/id1532440924"
+    },
+    {
+      "id": "6",
+      "content": "Explore my digital playground - a collection of web applications that challenge the status quo.",
+      "timestamp": "2024-02-23T15:00:00Z",
+      "image": "/images/apps.png",
+      "url": "https://apps.aayush.art"
+    },
+    {
+      "id": "7",
+      "content": "Let's collaborate on something extraordinary. Drop me a line - I'm always excited to discuss new possibilities.",
+      "timestamp": "2024-02-23T16:00:00Z",
+      "url": "mailto:hi@aayush.art"
+    },
+    {
+      "id": "8",
+      "content": "In pursuit of digital excellence, creating innovations that outlast time itself. 💫 = ∞",
+      "timestamp": "2024-02-23T17:00:00Z"
+    }
+  ],
+  "author": {
+    "name": "Aayush Pokharel",
+    "handle": "@aayushbuilds",
+    "avatar": "/images/profile.png",
+    "bio": "Crafting digital experiences that push the boundaries of what's possible. Based in Toronto.",
+    "socials": [
+      {
+        "platform": "TWITTER",
+        "url": "https://x.com/aayushbuilds"
+      },
+      {
+        "platform": "GITHUB",
+        "url": "https://github.com/Aayush9029"
+      },
+      {
+        "platform": "WEBSITE",
+        "url": "https://aayush.art"
+      }
+    ]
+  }
+}
