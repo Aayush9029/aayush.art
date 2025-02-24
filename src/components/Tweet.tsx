@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { OptimizedImage } from './OptimizedImage';
 
@@ -31,15 +32,26 @@ export default function Tweet({ content, timestamp, image, location, url }: Twee
     return `${month} ${day}, ${year} at ${formattedHours}:${minutes} ${ampm}`;
   };
 
+  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+  
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`glass glass-hover rounded-2xl p-6 mb-6 relative overflow-hidden group ${
-        url ? 'cursor-pointer hover:ring-2 hover:ring-blue-500/50 transition-all duration-300' : ''
+        url ? 'cursor-none hover:ring-2 hover:ring-blue-500/50 transition-all duration-300' : ''
       }`}
       onClick={handleClick}
+      onMouseMove={url ? handleMouseMove : undefined}
     >
       <div className="absolute inset-0 bg-noise"></div>
       <div className="relative z-10 space-y-4">
@@ -64,9 +76,17 @@ export default function Tweet({ content, timestamp, image, location, url }: Twee
           </div>
         </div>
         {url && (
-          <div className="absolute right-[-16px] bottom-[-15px] font-mono text-xs opacity-0 group-hover:opacity-100 ">
-            <div className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/5">
-            {url}
+          <div 
+            className="absolute font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+            style={{ 
+              left: `${mousePosition.x}px`, 
+              top: `${mousePosition.y - 60}px`,
+              transform: 'translateX(-50%)',
+              pointerEvents: 'none'
+            }}
+          >
+            <div className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/5 whitespace-nowrap">
+              {url}
             </div>
           </div>
         )}
